@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#f8fafc">
-  <meta name="description" content="Pyanm — Network Flow &amp; Bot Intrusion Detection Platform using UNSW-NB15 benchmark">
+  <meta name="description"
+    content="Pyanm — Network Flow &amp; Bot Intrusion Detection Platform using UNSW-NB15 benchmark">
   <title>Pyanm — Network Flow &amp; Bot Intrusion Detection</title>
   <link rel="stylesheet" href="/static/css/styles.css">
 </head>
+
 <body>
 
   <header>
@@ -18,10 +21,14 @@
       <div class="brand-subtitle">Flow Inspection &amp; Bot Analytics</div>
     </div>
     <nav role="tablist" aria-label="Dashboard views">
-      <button type="button" role="tab" id="tab-btn-pipeline" aria-selected="true" aria-controls="pipeline" class="active" onclick="navigateTab('pipeline', this)">Pipeline</button>
-      <button type="button" role="tab" id="tab-btn-baselines" aria-selected="false" aria-controls="baselines" onclick="navigateTab('baselines', this)">Baselines</button>
-      <button type="button" role="tab" id="tab-btn-models" aria-selected="false" aria-controls="models" onclick="navigateTab('models', this)">Models</button>
-      <button type="button" role="tab" id="tab-btn-inspector" aria-selected="false" aria-controls="inspector" onclick="navigateTab('inspector', this)">Flow inspector</button>
+      <button type="button" role="tab" id="tab-btn-pipeline" aria-selected="true" aria-controls="pipeline"
+        class="active" onclick="navigateTab('pipeline', this)">Pipeline</button>
+      <button type="button" role="tab" id="tab-btn-baselines" aria-selected="false" aria-controls="baselines"
+        onclick="navigateTab('baselines', this)">Baselines</button>
+      <button type="button" role="tab" id="tab-btn-models" aria-selected="false" aria-controls="models"
+        onclick="navigateTab('models', this)">Models</button>
+      <button type="button" role="tab" id="tab-btn-inspector" aria-selected="false" aria-controls="inspector"
+        onclick="navigateTab('inspector', this)">Flow inspector</button>
       <a class="docs-link" href="/docs" target="_blank" rel="noopener noreferrer">API docs &rarr;</a>
     </nav>
   </header>
@@ -128,21 +135,24 @@
         <div class="panel">
           <div class="panel-title">Continuous rate estimation (Linear regression)</div>
           <div style="margin-top: 12px; font-size: 13px;">
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Target variable</span>
               <span class="mono">Log transmission rate (rate)</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Mean squared error (MSE)</span>
-              <span class="mono">0.2841</span>
+              <span class="mono">0.0005</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Root mean squared error (RMSE)</span>
-              <span class="mono">0.5330</span>
+              <span class="mono">0.0218</span>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 7px 0;">
               <span style="color: var(--text-muted);">Coefficient of determination (R²)</span>
-              <span class="mono" style="font-weight: 600;">0.9412</span>
+              <span class="mono" style="font-weight: 600;">0.9981</span>
             </div>
           </div>
         </div>
@@ -150,21 +160,24 @@
         <div class="panel">
           <div class="panel-title">Binary bot classifier (Logistic regression baseline)</div>
           <div style="margin-top: 12px; font-size: 13px;">
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Target variable</span>
               <span class="mono">Binary label (0 = benign, 1 = bot)</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Accuracy</span>
-              <span class="mono">88.78%</span>
+              <span class="mono">90.86%</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
+            <div
+              style="display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--hairline);">
               <span style="color: var(--text-muted);">Precision / Recall</span>
-              <span class="mono">85.24% / 99.17%</span>
+              <span class="mono">90.00% / 96.42%</span>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 7px 0;">
               <span style="color: var(--text-muted);">F1-score / ROC-AUC</span>
-              <span class="mono" style="font-weight: 600;">0.9168 / 0.9702</span>
+              <span class="mono" style="font-weight: 600;">0.9310 / 0.9770</span>
             </div>
           </div>
         </div>
@@ -173,8 +186,10 @@
       <div class="panel" style="margin-top: 16px;">
         <div class="panel-title">Methodological design</div>
         <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-top: 6px;">
-          Cross-validation uses stratified 5-fold partitions to maintain identical normal-to-attack ratios across all iterations. 
-          Balanced bootstrapping is applied strictly to training folds to address minority attack representation; holdout test partitions remain untouched to reflect operational network conditions.
+          Cross-validation uses stratified 5-fold partitions to maintain identical normal-to-attack ratios across all
+          iterations.
+          Balanced bootstrapping is applied strictly to training folds to address minority attack representation;
+          holdout test partitions remain untouched to reflect operational network conditions.
         </p>
       </div>
     </section>
@@ -207,19 +222,19 @@
                 <td>Review II</td>
                 <td>Logistic regression</td>
                 <td>Linear baseline</td>
-                <td class="mono">88.78%</td>
-                <td class="mono">85.24%</td>
-                <td class="mono">99.17%</td>
-                <td class="mono">0.9168</td>
-                <td class="mono">0.9702</td>
+                <td class="mono">90.86%</td>
+                <td class="mono">90.00%</td>
+                <td class="mono">96.42%</td>
+                <td class="mono">0.9310</td>
+                <td class="mono">0.9770</td>
               </tr>
               <tr>
                 <td>Review III</td>
                 <td>Decision tree (Gini)</td>
                 <td>Single tree (depth 10)</td>
-                <td class="mono">93.58%</td>
-                <td class="mono">94.12%</td>
-                <td class="mono">95.43%</td>
+                <td class="mono">93.34%</td>
+                <td class="mono">95.06%</td>
+                <td class="mono">94.49%</td>
                 <td class="mono">0.9477</td>
                 <td class="mono">0.9512</td>
               </tr>
@@ -227,21 +242,21 @@
                 <td>Review III</td>
                 <td>Decision tree (Entropy)</td>
                 <td>Single tree (depth 10)</td>
-                <td class="mono">93.62%</td>
-                <td class="mono">94.18%</td>
-                <td class="mono">95.45%</td>
-                <td class="mono">0.9481</td>
+                <td class="mono">93.30%</td>
+                <td class="mono">95.80%</td>
+                <td class="mono">93.63%</td>
+                <td class="mono">0.9470</td>
                 <td class="mono">0.9525</td>
               </tr>
               <tr class="champion-row">
                 <td>Review III</td>
                 <td>Random forest (Champion)</td>
                 <td>Ensemble (100 trees)</td>
-                <td class="mono">94.61%</td>
-                <td class="mono">95.20%</td>
-                <td class="mono">96.01%</td>
+                <td class="mono">94.39%</td>
+                <td class="mono">95.86%</td>
+                <td class="mono">95.34%</td>
                 <td class="mono">0.9560</td>
-                <td class="mono">0.9854</td>
+                <td class="mono">0.9907</td>
               </tr>
             </tbody>
           </table>
@@ -252,13 +267,16 @@
         <div class="panel">
           <div class="panel-title">Principal component analysis</div>
           <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-top: 6px;">
-            Projection of 61 dimensions onto orthogonal axes. The first two components capture 67.3% of cumulative flow variance, separating high-velocity flooding from benign sessions in 2D space without label leakage.
+            Projection of 61 dimensions onto orthogonal axes. The first two components capture 67.31% of cumulative flow
+            variance (and 6 components capture 91.03%), separating high-velocity flooding from benign sessions in 2D
+            space without label leakage.
           </p>
         </div>
         <div class="panel">
           <div class="panel-title">Unsupervised K-means clustering</div>
           <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-top: 6px;">
-            Inertia elbow analysis establishes optimal partitioning at K=3. Discovered clusters separate traffic into three profiles: standard web browsing, volumetric DoS streams, and low-rate port probing.
+            Inertia elbow and silhouette analysis (0.7117 peak) establish optimal partitioning at K=3, isolating a
+            99.06% malicious bot cluster alongside mixed behavioral flow profiles.
           </p>
         </div>
       </div>
@@ -273,7 +291,8 @@
 
       <div class="panel" style="margin-bottom: 20px;">
         <div class="panel-title">1. Select holdout traffic flow</div>
-        <div id="scenario-btn-group" class="scenario-selector-grid" aria-label="Available scenarios">Loading scenarios...</div>
+        <div id="scenario-btn-group" class="scenario-selector-grid" aria-label="Available scenarios">Loading
+          scenarios...</div>
         <div id="scenario-details-box" class="scenario-details-box">
           <span id="scenario-description">Select a scenario above to inspect its parameters.</span>
           <span id="scenario-truth-pill" class="scenario-truth-pill"></span>
@@ -285,8 +304,8 @@
         <div class="execution-row">
           <label for="model-selector" style="font-size: 13px; color: var(--text-secondary);">Model architecture:</label>
           <select id="model-selector" class="select-model">
-            <option value="champion">Random forest ensemble (Review III — 95.6% F1)</option>
-            <option value="baseline">Logistic regression baseline (Review II — 91.7% F1)</option>
+            <option value="champion">Random forest ensemble</option>
+            <option value="baseline">Logistic regression baseline</option>
           </select>
           <button id="btn-run-inference" type="button" class="btn-run" onclick="executeInference()">
             <span id="btn-run-text">Inspect flow vector</span>
@@ -342,4 +361,5 @@
 
   <script src="/static/js/app.js"></script>
 </body>
+
 </html>
