@@ -11,5 +11,6 @@ class Settings:
     MODELS_DIR: str = os.path.join(BASE_DIR, "models")
     CLEANED_DIR: str = os.path.join(BASE_DIR, "Cleaned_DS")
     FRONTEND_DIR: str = os.path.join(BASE_DIR, "frontend")
+    FIGURES_DIR: str = os.path.join(BASE_DIR, "output_figures")
 
 settings = Settings()

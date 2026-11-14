@@ -30,3 +30,18 @@ def get_review3_metrics():
         "benchmark": model_service.review3_summary
     }
 
+@router.get("/figures")
+def get_output_figures():
+    manifest_path = os.path.join(settings.FIGURES_DIR, "figures_metadata.json")
+    if os.path.exists(manifest_path):
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            return {
+                "total_figures": 10,
+                "figures": json.load(f)
+            }
+    return {
+        "total_figures": 0,
+        "figures": [],
+        "message": "Figures metadata not found. Run export_figures.py to capture images."
+    }
+

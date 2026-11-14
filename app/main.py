@@ -30,6 +30,11 @@ static_dir = settings.FRONTEND_DIR
 if os.path.exists(static_dir):
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
+# Mount output figures directory
+figures_dir = settings.FIGURES_DIR
+if os.path.exists(figures_dir):
+    app.mount("/output_figures", StaticFiles(directory=figures_dir), name="figures")
+
 # Include Modular Routers
 app.include_router(system_router, prefix=settings.API_PREFIX)
 app.include_router(reports_router, prefix=settings.API_PREFIX)
