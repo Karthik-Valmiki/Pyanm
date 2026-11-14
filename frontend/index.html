@@ -122,6 +122,34 @@
           </table>
         </div>
       </div>
+
+      <!-- Output Figures: Review I -->
+      <div class="panel" style="margin-top: 24px;">
+        <div class="panel-title">Captured output figures (Review I: EDA & Preprocessing)</div>
+        <div class="figure-grid">
+          <div class="figure-card">
+            <div class="figure-title">Binary Label & Attack Category Breakdown</div>
+            <div class="figure-caption">Normal vs Malicious distribution and granular attack category breakdown</div>
+            <a href="/output_figures/eda_01_label_and_attack_distribution.png" target="_blank" rel="noopener">
+              <img src="/output_figures/eda_01_label_and_attack_distribution.png" alt="Binary Label and Attack Breakdown" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card">
+            <div class="figure-title">Log1p Transformation on Heavily Skewed Predictors</div>
+            <div class="figure-caption">Variance stabilization for sbytes, dbytes, spkts, and rate</div>
+            <a href="/output_figures/eda_02_skewed_features_log1p_transformation.png" target="_blank" rel="noopener">
+              <img src="/output_figures/eda_02_skewed_features_log1p_transformation.png" alt="Log1p Transformation" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card" style="grid-column: 1 / -1;">
+            <div class="figure-title">Pearson Correlation Matrix of Core Features</div>
+            <div class="figure-caption">Pairwise correlation across 18 core network features</div>
+            <a href="/output_figures/eda_03_feature_correlation_matrix.png" target="_blank" rel="noopener">
+              <img src="/output_figures/eda_03_feature_correlation_matrix.png" alt="Correlation Matrix Heatmap" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Tab 2: Validation & Baselines (Review II) -->
@@ -191,6 +219,34 @@
           Balanced bootstrapping is applied strictly to training folds to address minority attack representation;
           holdout test partitions remain untouched to reflect operational network conditions.
         </p>
+      </div>
+
+      <!-- Output Figures: Review II -->
+      <div class="panel" style="margin-top: 24px;">
+        <div class="panel-title">Captured output figures (Review II: Linear Baselines & Validation)</div>
+        <div class="figure-grid">
+          <div class="figure-card">
+            <div class="figure-title">Multiple Linear Regression: Actual vs. Predicted Rate</div>
+            <div class="figure-caption">Rate estimation fit and residual homoscedasticity analysis</div>
+            <a href="/output_figures/val_01_linear_regression_actual_vs_predicted.png" target="_blank" rel="noopener">
+              <img src="/output_figures/val_01_linear_regression_actual_vs_predicted.png" alt="Linear Regression Fit and Residuals" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card">
+            <div class="figure-title">Logistic Regression: Confusion Matrix & ROC Curve</div>
+            <div class="figure-caption">Baseline test set classification matrix and ROC curve (AUC = 0.9770)</div>
+            <a href="/output_figures/val_02_logistic_regression_cm_and_roc.png" target="_blank" rel="noopener">
+              <img src="/output_figures/val_02_logistic_regression_cm_and_roc.png" alt="Logistic Regression Confusion Matrix and ROC" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card" style="grid-column: 1 / -1;">
+            <div class="figure-title">Top Logistic Regression Coefficients (Beta Weights)</div>
+            <div class="figure-caption">Strongest positive (malicious) and negative (benign) learned weights</div>
+            <a href="/output_figures/val_03_logistic_regression_coefficients.png" target="_blank" rel="noopener">
+              <img src="/output_figures/val_03_logistic_regression_coefficients.png" alt="Logistic Regression Coefficients" loading="lazy">
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -278,6 +334,41 @@
             Inertia elbow and silhouette analysis (0.7117 peak) establish optimal partitioning at K=3, isolating a
             99.06% malicious bot cluster alongside mixed behavioral flow profiles.
           </p>
+        </div>
+      </div>
+
+      <!-- Output Figures: Review III -->
+      <div class="panel" style="margin-top: 24px;">
+        <div class="panel-title">Captured output figures (Review III: Advanced Architectures & PCA)</div>
+        <div class="figure-grid">
+          <div class="figure-card">
+            <div class="figure-title">PCA Scree Plot & 2D Projection Space</div>
+            <div class="figure-caption">Explained variance across 15 PCs and 2D separation of benign vs bot flows</div>
+            <a href="/output_figures/dr_01_pca_scree_and_2d_projection.png" target="_blank" rel="noopener">
+              <img src="/output_figures/dr_01_pca_scree_and_2d_projection.png" alt="PCA Scree Plot and 2D Projection" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card">
+            <div class="figure-title">K-Means Inertia Elbow & Silhouette Scores</div>
+            <div class="figure-caption">Unsupervised clustering optimization establishing optimal K=3</div>
+            <a href="/output_figures/dr_02_kmeans_elbow_and_silhouette.png" target="_blank" rel="noopener">
+              <img src="/output_figures/dr_02_kmeans_elbow_and_silhouette.png" alt="K-Means Elbow and Silhouette" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card">
+            <div class="figure-title">Decision Tree Architecture (Gini Criterion)</div>
+            <div class="figure-caption">First 3 hierarchical split levels and sample branch decisions</div>
+            <a href="/output_figures/dr_03_decision_tree_architecture.png" target="_blank" rel="noopener">
+              <img src="/output_figures/dr_03_decision_tree_architecture.png" alt="Decision Tree Architecture" loading="lazy">
+            </a>
+          </div>
+          <div class="figure-card">
+            <div class="figure-title">Random Forest Champion: Importance & Confusion Matrix</div>
+            <div class="figure-caption">Top 12 Gini feature importances and holdout test confusion matrix</div>
+            <a href="/output_figures/dr_04_random_forest_importance_and_cm.png" target="_blank" rel="noopener">
+              <img src="/output_figures/dr_04_random_forest_importance_and_cm.png" alt="Random Forest Evaluation" loading="lazy">
+            </a>
+          </div>
         </div>
       </div>
     </section>
